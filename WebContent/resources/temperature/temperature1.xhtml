@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite">
+	
+	<cc:interface componentType="exercises.Temperature1">
+		<cc:attribute name="value"/>
+	</cc:interface>
+	
+	<cc:implementation>
+		<h:inputText id="inputTemp" value="#{cc.attrs.value}" />°
+		<h:selectOneMenu id="menuCorF">
+			<f:selectItems value="#{fahrenheitOfCelsiusMenu.tempOptions}"/>
+		</h:selectOneMenu>
+	</cc:implementation>
+</html>
